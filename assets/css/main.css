@@ -64,6 +64,7 @@ body {
   color: var(--text-color);
   font-size: 1.6rem;
   font-family: Gordita, sans-serif;
+  background: var(--body-bg);
 }
 
 a {
@@ -1259,16 +1260,24 @@ html.dark {
   --top-action-shadow: rgba(0, 0, 0, 0.20);
   --top-act-group-separate: #EDEDF6;
   --header-bg-group-title: #ffffff;
+  --body-bg: #292e39;
 }
 
 html {
-  --text-color: #1A162E;
-  --icon-color: brightness(0) saturate(100%) invert(4%) sepia(68%) saturate(2737%) hue-rotate(240deg) brightness(92%) contrast(89%);
+  --text-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(4%) sepia(68%)
+      saturate(2737%) hue-rotate(240deg) brightness(92%) contrast(89%);
+  --body-bg: #f6f6f6;
   --header-bg-color: #eee;
   --top-action-bg-color: #fff;
   --top-action-shadow: rgba(237, 237, 246, 0.2);
-  --top-act-group-separate: #EDEDF6;
-  --header-bg-group-title: #1A162E;
+  --top-act-group-separate: #ededf6;
+  --header-bg-group-title: #1a162e;
+}
+@media (max-width: 991.98px) {
+  html {
+    --header-bg-color: #fff;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
