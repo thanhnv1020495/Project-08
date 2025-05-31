@@ -9,6 +9,11 @@
     margin-left: 39px;
   }
 }
+@media (max-width: 767.98px) {
+  .logo {
+    margin-left: 0;
+  }
+}
 .logo__title {
   font-size: 22px;
   font-style: normal;

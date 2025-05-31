@@ -1125,6 +1125,11 @@ button, input, select, textarea {
 .header {
   background: var(--header-bg-color);
 }
+@media (max-width: 991.98px) {
+  .header {
+    box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  }
+}
 
 .top-bar {
   padding: 30px 0;
@@ -1149,11 +1154,11 @@ button, input, select, textarea {
 }
 
 .navbar {
-  margin-left: 144px;
+  margin-left: 129px;
 }
 @media (max-width: 1199.98px) {
   .navbar {
-    margin-left: 50px;
+    margin-left: 28px;
   }
 }
 @media (max-width: 991.98px) {
@@ -1236,6 +1241,11 @@ button, input, select, textarea {
     margin-left: 39px;
   }
 }
+@media (max-width: 767.98px) {
+  .logo {
+    margin-left: 0;
+  }
+}
 .logo__title {
   font-size: 22px;
   font-style: normal;
@@ -1260,7 +1270,7 @@ button, input, select, textarea {
   padding-top: 54px;
 }
 .dropdown__inner {
-  max-height: min(582px, 100vh - 154px);
+  --inner-max-height: min(582px, 100vh - 154px);
   position: relative;
   padding: 30px;
   border-radius: 20px;
@@ -1276,9 +1286,11 @@ button, input, select, textarea {
   filter: var(--dropdown-arrow-color);
 }
 .dropdown .top-menu {
-  height: 100%;
+  max-height: calc(var(--inner-max-height) - 60px);
 }
 .dropdown .top-menu__main {
+  max-height: inherit;
+  overflow-y: auto;
   height: 100%;
   width: 292px;
   border-right: 1px solid var(--top-menu-border-color);
@@ -1308,6 +1320,7 @@ button, input, select, textarea {
   position: absolute;
   right: -10px;
   bottom: -5px;
+  filter: var(-menu-column-icon-color);
 }
 .dropdown .menu-column__heading {
   margin-top: 4px;
@@ -1334,17 +1347,25 @@ button, input, select, textarea {
 
 html.dark {
   --text-color: #ffffff;
-  --icon-color: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(0%) hue-rotate(8deg) brightness(105%) contrast(100%);
-  --header-bg-color: #171C28;
+  --icon-color: brightness(0) saturate(100%) invert(99%) sepia(5%)
+      saturate(0%) hue-rotate(8deg) brightness(105%) contrast(100%);
+  --header-bg-color: #171c28;
   --top-action-bg-color: #292e39;
-  --top-action-shadow: rgba(0, 0, 0, 0.20);
-  --top-act-group-separate: #EDEDF6;
+  --top-action-shadow: rgba(0, 0, 0, 0.2);
+  --top-act-group-separate: #ededf6;
   --header-bg-group-title: #ffffff;
   --body-bg: #292e39;
   --dropdown-bg-color: #212b3f;
   --dropdown-shadow-theme: rgba(23, 28, 40, 04);
-  --dropdown-arrow-color: brightness(0) saturate(100%) invert(15%) sepia(28%) saturate(535%) hue-rotate(185deg) brightness(90%) contrast(83%);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(15%) sepia(28%)
+      saturate(535%) hue-rotate(185deg) brightness(90%) contrast(83%);
   --top-menu-border-color: #171c28;
+  --menu-column-icon-color: brightness(0) saturate(100%) invert(90%) sepia(8%) saturate(976%) hue-rotate(252deg) brightness(117%) contrast(97%);
+}
+@media (max-width: 991.98px) {
+  html.dark {
+    --header-shadow-color: rgba(0, 0, 0, 0.2);
+  }
 }
 
 html {
@@ -1364,6 +1385,7 @@ html {
 @media (max-width: 991.98px) {
   html {
     --header-bg-color: #fff;
+    --header-shadow-color: rgba(237, 237, 246, 0.20);
   }
 }
 

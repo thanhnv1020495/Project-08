@@ -13,6 +13,7 @@ html {
 
     @include abstracts.breakpoint(lg) {
         --header-bg-color: #fff;
+         --header-shadow-color: rgba(237, 237, 246, 0.20);
     }
 
     // dropdown 
@@ -20,4 +21,7 @@ html {
     --dropdown-bg-color: #fff;
     --dropdown-shadow-theme: rgba(200, 200, 200, 0.4);
     --top-menu-border-color: #d2d1d6;
+    
+   
+   
 }

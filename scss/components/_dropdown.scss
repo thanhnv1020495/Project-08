@@ -6,7 +6,7 @@
     // display: none;
 
     &__inner {
-        max-height: min(582px, 100vh - 154px);
+        --inner-max-height: min(582px, 100vh - 154px);
         position: relative;
         padding: 30px;
         border-radius: 20px;
@@ -24,9 +24,11 @@
     }
 
     .top-menu {
-        height: 100%;
+        max-height: calc(var(--inner-max-height) - 60px);
 
         &__main {
+            max-height: inherit;
+            overflow-y: auto;
             height: 100%;
             width: 292px;
             border-right: 1px solid var(--top-menu-border-color);
@@ -59,6 +61,7 @@
             position: absolute;
             right: -10px;
             bottom: -5px;
+            filter: var(-menu-column-icon-color);
         }
 
         &__heading {
