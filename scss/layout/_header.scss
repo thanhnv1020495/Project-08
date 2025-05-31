@@ -50,10 +50,15 @@
 
     &__list {
         @extend %flexItemsCenter;
-        gap: 30px;
+        // gap: 30px;
+    }
+
+    &__item:hover .dropdown {
+        display: block;
     }
 
     &__link {
+        padding: 0 15px;
         display: inline-flex;
         gap: 6px;
         font-size: 15px;
