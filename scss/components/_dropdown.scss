@@ -5,7 +5,7 @@
     position: absolute;
     left: 0;
     padding-top: 54px;
-    display: none;
+    display: grid;
 
     &__inner {
         --inner-max-height: min(582px, 100vh - 154px);
@@ -108,7 +108,7 @@
     }
 
     .sub-menu {
-        display: none;
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
         position: absolute;
